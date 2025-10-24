@@ -10,11 +10,11 @@ const Footer = () => {
                 </div>
                 
                 <div className="icon-footer">
-                    <a href=""><FontAwesomeIcon icon={faSquareInstagram} /></a>
+                    <a href="https://www.instagram.com/canu.bj/"><FontAwesomeIcon icon={faSquareInstagram} /></a>
                 </div>
 
                 <div className="icon-footer">
-                    <a href=""><FontAwesomeIcon icon={faSquareGithub} /></a>
+                    <a href="https://github.com/Massimo-Romairone"><FontAwesomeIcon icon={faSquareGithub} /></a>
                 </div>
             </div>
             <p>© 2025 Massimo Romairone. All rights reserved.</p>

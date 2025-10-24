@@ -6,7 +6,10 @@ const About = () => {
         <div className="aboutSection1">
           <p>About me</p>
             <p className="pAboutMe">
-              ¡Hola! Soy Massimo Romairone, un desarrollador web apasionado por crear experiencias digitales atractivas y funcionales. Con habilidades en HTML, CSS, JavaScript y frameworks modernos como React, me especializo en construir sitios web responsivos y aplicaciones interactivas. Me encanta resolver problemas y aprender nuevas tecnologías para mejorar continuamente mis habilidades. Estoy emocionado de contribuir a proyectos innovadores y colaborar con equipos creativos.
+              ¡Hola! Soy Massimo Romairone, actualmente estoy cursando la carrera de Desarrollo Web Fullstack.
+              Me encanta transformar ideas en código y desarrollar soluciones backend sólidas, utilizando herramientas como NestJS y diferentes sistemas de bases de datos.
+              Sigo aprendiendo cada día, probando nuevas tecnologías y mejorando mis habilidades para enfrentar desafíos cada vez más complejos.<br />
+              Backend sólido, validaciones al día y seguridad siempre como prioridad.
             </p>
         </div>
 

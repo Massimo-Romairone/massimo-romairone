@@ -1,10 +1,26 @@
+import { TypeAnimation } from "react-type-animation";
+
 const Home = () => {
   return (
     <>
       <section id="home" className="home">
         <div className="part1">
           <p>Hola.</p>
-          <p>Soy <span className="nombre">Massimo Romairone</span></p>
+          <p>Soy{" "}
+            <span className="nombre-wrapper">
+              <TypeAnimation
+                sequence={[
+                  "Massimo Romairone", 2000,
+                  "", 1000,
+                ]}
+                wrapper="span"
+                cursor={true}
+                repeat={Infinity}
+                speed={10}
+                className="nombre"
+              />
+            </span>
+          </p>
           <p>Desarrollador Web</p>
 
           <div className="section1-buttons">

@@ -1,4 +1,23 @@
+import { useEffect } from "react";
+
 const Skills = () => {
+    
+    useEffect(() => {
+        const skills = document.querySelectorAll(".skills-container .skill");
+
+        const observer = new IntersectionObserver(
+            (entries) => {entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animate");
+                    observer.unobserve(entry.target);
+                }
+            });
+            },
+            { threshold: 0.2, }
+        );
+
+        skills.forEach((skill) => observer.observe(skill));
+    }, []);
   return (
     <section id="skills" className="skills">
         <p>Skills</p>
@@ -20,7 +39,7 @@ const Skills = () => {
                 <img src="./ts.png" alt="" />
             </div>
             <div className="skill">
-                <h2>NestJs</h2>
+                <h2>NestJS</h2>
                 <img src="./nest.png" alt="" />
             </div>
             <div className="skill">

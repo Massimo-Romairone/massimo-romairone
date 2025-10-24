@@ -2,7 +2,7 @@ const Header = () => {
   return (
     <header>
         <div className="header-content">
-            <h1>Massimo Gianfranco Romairone</h1>
+            <img src="./logo.png" alt="Logo" className="logo"/>
             
             <nav>
                 <ul>
