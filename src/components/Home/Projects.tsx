@@ -4,7 +4,7 @@ const Projects = () => {
       <p>Projects</p>
       <div className="projects-container">
         <div className="project">
-          <img src="/AgapeLogo.png" alt="logoProject" onContextMenu={(e) => e.preventDefault()} draggable="false"/>
+          <img src={`${import.meta.env.BASE_URL}AgapeLogo.png`} alt="logoProject" onContextMenu={(e) => e.preventDefault()} draggable="false"/>
           <p>Plataforma de donaciones económicas sin fines de lucro<br/>
           En conjunto con Victoriano Feijoo</p>
         </div>
