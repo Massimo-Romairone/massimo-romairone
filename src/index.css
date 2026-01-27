@@ -1,12 +1,13 @@
 :root {
-    --color-principal: #ff4343;
+    --color-principal: #ea1b17;
     --color-fondo: #080808;
     --fuente-principal: "Poppins", sans-serif;
     --fuente-secundaria: "Roboto", sans-serif;
+    scroll-behavior: smooth;
 }
 
 ::selection {
-    background-color: #ff4343;
+    background-color: var(--color-principal);
     color: white;
 }
 
@@ -19,26 +20,41 @@ body{
     
 }
 
+.menu-icon {
+    display: none;
+}
+
 header {
     width: 100%;
     color: white;
     z-index: 1000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    background: rgba(8, 8, 8, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    max-width: 100vw;
 }
 
 .header-content {
     display: flex;
+    position: relative;
     justify-content: space-around;
     align-items: center;
 }
 
 .logo {
+    object-fit: contain;
     height: 100px;
-    width: 100px;
+    width: auto;
     transition: all 0.5s ease;
+    transform: scale(1.40);
 }
 
 .logo:hover {
-    transform: scale(1.30);
+    transform: scale(1.70);
 }
 
 nav ul {
@@ -59,19 +75,27 @@ nav a {
 }
 
 nav a:hover {
-    color: #ff4343;
+    color: var(--color-principal);
     text-decoration: underline;
 }
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
+
+/* Home */
 
 .home {
     display: flex;
     align-items: center;
+    min-height: 100vh;
     justify-content: space-around;
     animation: fadeInDown 1.5s ease forwards;
+    padding-top: 0;
+    margin-top: -40px;
+    background-color: #080808;
+    overflow: hidden;
 }
 
 @keyframes fadeInDown {
@@ -91,7 +115,7 @@ html {
 }
 
 .nombre {
-    color: #ff4343;
+    color: #ea1a17e1;
     font-weight: bold;
     display: inline-block;
 }
@@ -102,36 +126,38 @@ html {
   white-space: nowrap;
 }
 
-.section1-buttons button {
+.section1-buttons a {
     margin-right: 15px;
     padding: 10px 20px;
     font-size: 19px;
     cursor: pointer;
     color: white;
-    box-shadow: 0 0 8px rgb(255, 67, 67);
+    box-shadow: 0 0 8px rgb(251, 26, 26);
     transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.section1-buttons button:hover {
+.section1-buttons a:hover {
     transform: scale(1.05);
 }
 
-.section1-buttons button:active {
-    background: #ff2f2f;
+.section1-buttons a:active {
+    background: var(--color-principal);
     transform: scale(0.95);
 }
 
 .section1-button1 {
-    background-color: #ff4343;
+    background-color: var(--color-principal);
     color: white;
-    border-color: #ff4343;
+    border-color: var(--color-principal);
     border-style:dashed;
     
 }
 
 .section1-button2 {
     background-color: unset;
-    border: 2px solid #ff4343;
+    border: 2px solid var(--color-principal);
     color: white;
 }
 
@@ -140,46 +166,43 @@ html {
     margin-top: 10px;
 }
 
-.signo1 {
-    position: absolute;
-    top: 0;
-    left: -80px;
-    height: 70px;
-    width: 70px;
+.foto-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glow-back {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background-color: #ea1b17;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.85;
+  z-index: 1;
 }
 
 .fotoPerfil {
-    display: block;
-    width: 300px;
-    border-radius: 50%;
-    box-shadow:
-    0 0 60px rgba(255, 67, 67, 0.725),
-    0 0 80px rgba(255, 67, 67, 0.3);
-    transition: 0.3s ease;
-}
-
-.fotoPerfil::after {
-    content: "";
-    position: absolute;
-    inset: -15px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 67, 67, 0.25), transparent 70%);
-    pointer-events: none;
+  width: 400px;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.5));
+  transition: transform 0.3s ease;
+  filter: grayscale(40%) contrast(110%);
+  transition: 0.5s;
 }
 
 .fotoPerfil:hover {
-    box-shadow:
-        0 0 70px rgba(255, 67, 67, 0.8),
-        0 0 120px rgba(255, 67, 67, 0.5);
-    filter: brightness(1.1);
+  filter: grayscale(0%) contrast(100%);
 }
 
-.signo2 {
-    position: absolute;
-    bottom: 0;
-    right: -80px;
-    height: 70px;
-    width: 70px;
+.foto-container:hover .glow-back {
+  opacity: 0.9;
+  width: 300px;
+  transition: all 0.8s ease;
 }
 
 /* About Section */
@@ -191,7 +214,6 @@ html {
     justify-content: center;
     text-align: center;
     padding: 40px;
-    margin-top: 27px;
     color: #fff;
     height: 400px;
 }
@@ -209,7 +231,7 @@ html {
     content: "";
     width: 40px;
     height: 2px;
-    background-color: #ff4343;
+    background-color: var(--color-principal);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -225,7 +247,7 @@ html {
 }
 
 .me {
-    color: #ff4343;
+    color: var(--color-principal);
 }
 
 .pAboutMe {
@@ -260,7 +282,7 @@ html {
     content: "";
     width: 40px;
     height: 2px;
-    background-color: #ff4343;
+    background-color: var(--color-principal);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -292,12 +314,6 @@ html {
 
 .skill:hover {
     transform: scale(1.05);
-}
-
-.skill img {
-    width: 100px;
-    filter: grayscale(100%);
-    transition: all 0.5s ease;
 }
 
 .skill img {
@@ -362,7 +378,7 @@ html {
     content: "";
     width: 40px;
     height: 2px;
-    background-color: #ff4343;
+    background-color: var(--color-principal);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -392,10 +408,23 @@ html {
     border-radius: 8px;
     height: 250px;
     width: 250px;
+    transition: all 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    background: #2a2a2a;
 }
 
 .project h2 {
     font-family: var(--fuente-principal);
+}
+
+.project img {
+    width: 250px;
+    margin-top: 8px;
+    margin-bottom: 35px;
 }
 
 .project p {
@@ -406,23 +435,6 @@ html {
     overflow-wrap: break-word;
     hyphens: normal;
 }
-
-.projects-container a.project {
-    display: block;
-    background: #222;
-    padding: 20px;
-    border-radius: 10px;
-    text-decoration: none;
-    color: #fff;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.projects-container a.project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    background: #2a2a2a;
-}
-
 
 /* Contact Section */
 
@@ -450,7 +462,7 @@ html {
     content: "";
     width: 40px;
     height: 2px;
-    background-color: #ff4343;
+    background-color: var(--color-principal);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -491,7 +503,7 @@ html {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    outline: 2px solid #ff4343;
+    outline: 2px solid var(--color-principal);
 }
 
 .contact-form textarea {
@@ -501,12 +513,12 @@ html {
 .contact-form button {
     padding: 10px;
     font-size: 20px;
-    background-color: #ff4343;
+    background-color: var(--color-principal);
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0 0 8px rgb(255, 67, 67);
+    box-shadow: 0 0 8px rgb(251, 26, 26);
     transition: all 0.3s ease;
 }
 
@@ -515,8 +527,34 @@ html {
 }
 
 .contact-form button:active {
-    background: #ff2f2f;
+    background: var(--color-principal);
     transform: scale(0.95);
+}
+
+.form-status {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.form-status.success {
+  background-color: var(--color-principal);
+  color: white;
+  border: 1px solid var(--color-principal);
+}
+
+.form-status.error {
+  background-color: var(--color-principal);
+  color: white;
+  border: 1px solid var(--color-principal);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .contact-info li {
@@ -529,9 +567,9 @@ html {
 
 
 .contact-info svg {
-    color: #ff4343;
+    color: var(--color-principal);
     font-size: 30px;
-    border: 2px solid #ff4343;
+    border: 2px solid var(--color-principal);
     padding: 10px;
 }
 
@@ -587,7 +625,25 @@ html {
 }
 
 .icon-footer a:hover {
-    color: #ff4343;
+    color: var(--color-principal);
     transform: scale(1.1);
     transition: all 0.3s ease;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--color-principal);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

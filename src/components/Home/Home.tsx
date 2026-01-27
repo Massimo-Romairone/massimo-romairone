@@ -21,18 +21,19 @@ const Home = () => {
               />
             </span>
           </p>
-          <p>Desarrollador Web</p>
+          <p>Desarrollador Web Full Stack</p>
 
           <div className="section1-buttons">
-              <button className="section1-button1">Sobre mi</button>
-              <button className="section1-button2">Proyectos</button>
+            <a href="#about" className="section1-button1">Sobre mi</a>
+            <a href="#projects" className="section1-button2">Proyectos</a>
           </div>
         </div>
 
           <div className="part2">
-              <img src="./menorQueV2.png" alt="Menor que" className="signo1" />
-              <img src="https://static.vecteezy.com/system/resources/previews/047/848/782/non_2x/user-profile-sign-on-white-background-vector.jpg" alt="Foto de perfil" className="fotoPerfil"/>
-              <img src="./mayorQueV2.png" alt="Mayor que" className="signo2" />
+            <div className="foto-container">
+              <div className="glow-back"></div>
+              <img src="perfil.png" alt="Massimo Romairone" className="fotoPerfil" onContextMenu={(e) => e.preventDefault()} draggable="false"/>
+            </div>
           </div>
       </section>
     </>

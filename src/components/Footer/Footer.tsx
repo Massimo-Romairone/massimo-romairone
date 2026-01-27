@@ -6,7 +6,7 @@ const Footer = () => {
         <footer className="footer">
             <div className="icons-footer">
                 <div className="icon-footer">
-                    <a href=""><FontAwesomeIcon icon={faSquareLinkedin} /></a>
+                    <a href="https://www.linkedin.com/in/massimo-gianfranco-romairone-00a8743a0/"><FontAwesomeIcon icon={faSquareLinkedin} /></a>
                 </div>
                 
                 <div className="icon-footer">
@@ -17,7 +17,8 @@ const Footer = () => {
                     <a href="https://github.com/Massimo-Romairone"><FontAwesomeIcon icon={faSquareGithub} /></a>
                 </div>
             </div>
-            <p>© 2025 Massimo Romairone. All rights reserved.</p>
+            <p>Massimo Gianfranco Romairone</p>
+            <p>Full Stack Developer</p>
         </footer>
     );
 }

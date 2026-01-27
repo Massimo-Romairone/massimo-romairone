@@ -24,31 +24,31 @@ const Skills = () => {
         <div className="skills-container">
             <div className="skill">
                 <h2>HTML</h2>
-                <img src="./html.png" alt="" />
+                <img src="./html.png" alt="" onContextMenu={(e) => e.preventDefault()} draggable="false"/>
             </div>
             <div className="skill">
                 <h2>CSS</h2>
-                <img src="./css.png" alt="" />
+                <img src="./css.png" alt="" onContextMenu={(e) => e.preventDefault()} draggable="false"/>
             </div>
             <div className="skill">
                 <h2>JavaScript</h2>
-                <img src="./js.png" alt="" />
+                <img src="./js.png" alt="" onContextMenu={(e) => e.preventDefault()} draggable="false"/>
             </div>
             <div className="skill">
                 <h2>TypeScript</h2>
-                <img src="./ts.png" alt="" />
+                <img src="./ts.png" alt="" onContextMenu={(e) => e.preventDefault()} draggable="false"/>
             </div>
             <div className="skill">
                 <h2>NestJS</h2>
-                <img src="./nest.png" alt="" />
+                <img src="./nest.png" alt="" onContextMenu={(e) => e.preventDefault()} draggable="false"/>
             </div>
             <div className="skill">
                 <h2>React</h2>
-                <img src="./react.png" alt="" />
+                <img src="./react.png" alt="" onContextMenu={(e) => e.preventDefault()} draggable="false"/>
             </div>
             <div className="skill">
                 <h2>GitHub</h2>
-                <img src="./github.png" alt="" />
+                <img src="./github.png" alt="" onContextMenu={(e) => e.preventDefault()} draggable="false"/>
             </div>
         </div>
     </section>
