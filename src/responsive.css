@@ -454,7 +454,7 @@
     }
 
     .contact-form button {
-        width: 120%;
+        width: 110%;
         padding: 15px;
         font-size: 1.1rem;
     }
@@ -506,6 +506,37 @@
 
     .info-p p {
         font-size: 0.85rem;
+    }
+
+    .container-contact,
+    .contact-container1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .contact-form form {
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form input, 
+    .contact-form textarea {
+        width: 100%;
+        box-sizing: border-box;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 16px;
+    }
+
+    .contact-form button {
+        width: 100%;
+        box-sizing: border-box;
     }
 }
 
